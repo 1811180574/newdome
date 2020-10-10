@@ -1,21 +1,25 @@
 <template>
   <div>
-    购物车
+    <header>
+
+    </header>
 
   </div>
 </template>
 
 <script>
-  export default {
-    data(){
-      return{
+export default {
+  data () {
+    return {
 
-      }
     }
-    
   }
+
+}
 </script>
 
 <style lang="lass" scoped>
-
+/* header{
+    width: ;
+  } */
 </style>
