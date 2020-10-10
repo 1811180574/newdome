@@ -3,36 +3,39 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Home',
-    component: () => import( '../views/Home.vue')
+    component: () => import('../views/Home.vue')
 
   },
   {
     path: '/index',
     name: 'index',
-    component: () => import( '../views/index.vue')
+    component: () => import('../views/index.vue')
 
   },
   {
     path: '/recommend',
     name: 'recommend',
-    component: () => import( '../views/recommend.vue')
+    component: () => import('../views/recommend.vue')
 
   },
   {
     path: '/shopcar',
     name: 'shopcar',
-    component: () => import( '../views/shopcar.vue')
+    component: () => import('../views/shopcar.vue')
 
   },
   {
     path: '/mine',
     name: 'mine',
-    component: () => import( '../views/mine.vue')
-
+    component: () => import('../views/mine.vue')
+  },
+  {
+    path: '/particulars/+"text"',
+    name: 'particulars',
+    component: () => import('../components/particulars/Particulars.vue')
   },
 
 ]

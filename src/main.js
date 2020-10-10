@@ -5,6 +5,7 @@ import store from './store'
 import less from 'less'
 
 import axios from 'axios'
+import './assets/icon/iconfont.css'
 import './assets/css/style.css'
 import './assets/css/normalize.css'
 import './assets/js/rem.js'
