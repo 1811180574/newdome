@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="footer" >
+    <div class="footer" v-show="$route.meta.isshow">
        <li v-for='(item,index) in arr' :key="index" @click="fun(index)">
          <router-link :to="item.path" style="text-decoration:none;">
          <img :src="n===index?item.src2:item.src" alt="">
