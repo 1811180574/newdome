@@ -33,7 +33,7 @@ const routes = [{
     component: () => import('../views/mine.vue')
   },
   {
-    path: '/particulars/+"text"',
+    path: '/particulars',
     name: 'particulars',
     component: () => import('../components/particulars/Particulars.vue')
   },

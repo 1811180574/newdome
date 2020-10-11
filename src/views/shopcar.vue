@@ -57,7 +57,6 @@ export default {
     qq() {
       this.$axios.get('/data/homeGoods.json').then(res => {
         this.dataAll = res.data
-        console.log(res.data)
       })
     },
     //点击跳转登录页面
@@ -66,13 +65,14 @@ export default {
     },
     //点击详情页
     fn(i) {
-      this.$router.push({
-        path: './particulars',
-        params: {
-          key: i
-        }
-      })
-      console.log(i)
+      // this.$router.push({
+      //   name: 'particulars',
+      //   params: {
+      //     key: i
+      //   }
+      // })
+      this.$store.commit('data', i)
+      this.$router.push('particulars')
     }
   },
   mounted() {
