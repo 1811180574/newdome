@@ -9,6 +9,8 @@ import './assets/css/style.css'
 import './assets/css/normalize.css'
 import './assets/js/rem.js'
 
+import './assets/icon/iconfont.css'
+
 // 引入vant组件
 import Vant from 'vant'
 import 'vant/lib/index.css'

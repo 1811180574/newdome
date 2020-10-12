@@ -13,27 +13,52 @@ const routes = [
   {
     path: '/index',
     name: 'index',
-    component: () => import( '../views/index.vue')
+    component: () => import( '../views/index.vue'),
+    meta: {
+      isshow: true
+    }
 
   },
   {
     path: '/recommend',
     name: 'recommend',
-    component: () => import( '../views/recommend.vue')
+    component: () => import( '../views/recommend.vue'),
+    meta: {
+      isshow: true
+    }
 
   },
   {
     path: '/shopcar',
     name: 'shopcar',
-    component: () => import( '../views/shopcar.vue')
+    component: () => import( '../views/shopcar.vue'),
+    meta: {
+      isshow: true
+    }
 
   },
   {
     path: '/mine',
     name: 'mine',
-    component: () => import( '../views/mine.vue')
+    component: () => import( '../views/mine.vue'),
+    meta: {
+      isshow: true
+    }
 
   },
+  {
+    path: '/NewShipping',
+    name: 'NewShipping',
+    component: () => import( '../components/NewShipping.vue'),
+  
+  },
+  {
+    path: '/Shipping',
+    name: 'Shipping',
+    component: () => import( '../components/Shipping.vue'),
+  
+  },
+
 
 ]
 
