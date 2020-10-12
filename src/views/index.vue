@@ -14,7 +14,7 @@
           <div class="swiper-wrapper">
             <div
               class="swiper-slide"
-              v-for="(item, index) in indexInfo"
+              v-for="(item, index) in indexlunbo"
               :key="index"
             >
               <img :src="item.img" alt="" />
@@ -49,7 +49,12 @@
       </div>
     </div>
     <!-- 手机的图片和价格 -->
-    <div class="phone_info" v-for="(item, index) in indexInfo" :key="index" @click="goInfo(index)"> 
+    <div
+      class="phone_info"
+      v-for="(item, index) in indexInfo"
+      :key="index"
+      @click="goInfo(index)"
+    >
       <div class="phone_photo">
         <img :src="item.img" alt="" />
       </div>
@@ -68,17 +73,21 @@ export default {
     return {
       //手机信息
       indexInfo: [],
+      //主页轮播图
+      indexlunbo: [],
     }
   },
   created() {
     this.getindexinfo()
+    //主页轮播图
+    this.getindexPhoto()
   },
   watch: {
     indexInfo(info) {
       if (info.length !== 0) {
         this.$nextTick(function() {
           new Swiper('.navlunbo', {
-            loop:true,
+            loop: true,
             autoplay: {
               delay: 2000,
               stopOnLastSlide: false,
@@ -90,23 +99,31 @@ export default {
     },
   },
   methods: {
+    
+    //获取主页轮播图的图片
+    async getindexPhoto() {
+      const res = await this.$axios.get(
+        'https://shiyaming1994.github.io/mi/static/rotationChart.json'
+      )
+      this.indexlunbo = res.data
+      console.log(this.indexlunbo)
+    },
     //获取主页的数据
     async getindexinfo() {
-      const res = await this.$axios.get('/data/homeGoods.json')
+      const res = await this.$axios.get(
+        'https://shiyaming1994.github.io/mi/static/homeGoods.json?page=1'
+      )
       this.indexInfo = res.data
       console.log(this.indexInfo)
     },
     //跳转详情页的函数
-    goInfo(index){
+    goInfo(index) {
       console.log(index)
       this.$router.push({
-        path:`/phoneinfo/${index}`,
-        // query:{
-        //   ind:index
-        // }
-        })
-    }
-
+        //跳转页面传参
+        path: `/phoneinfo/${index}`,
+      })
+    },
   },
 }
 </script>
@@ -188,7 +205,7 @@ header {
 }
 .phone_info {
   width: 48%;
-  height: 4.52rem;
+  height: 4.82rem;
   margin-left: 1%;
   float: left;
   margin-top: 0.1rem;

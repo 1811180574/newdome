@@ -8,6 +8,9 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('../views/Home.vue'),
+    meta: {
+      isshow: true,
+    },
   },
   {
     path: '/index',
@@ -15,7 +18,6 @@ const routes = [
     component: () => import('../views/index.vue'),
         meta: {
       isshow: true,
-      // keep: true
     },
     children:[
     ]
