@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Home></Home>
+    <Home v-show="$route.meta.isshow"></Home>
 
     <router-view />
   </div>
@@ -11,13 +11,10 @@ export default {
   components: {
     Home
   },
-  data () {
-    return {
-
-    }
-  },
+  data() {
+    return {}
+  }
 }
 </script>
 
-<style>
-</style>
+<style></style>

@@ -16,7 +16,7 @@
         <p>购物车还是空的</p>
         <div class="stroll">去逛逛</div>
         <div class="boss">
-          <img src="../assets/img/home/back.png" alt="" />
+          <img src="../assets/img/home/3.webp" alt="" />
           <div class="r">
             <div class="s1">小米8 屏幕指纹板</div>
             <div class="s2">￥7999</div>
@@ -31,10 +31,10 @@
       </div>
       <div class="headline">
         <p>猜你喜欢</p>
-        <p>实时推荐你的心心念念</p>
+        <p>实时推荐</p>
       </div>
-      <ul v-for="item of dataAll" :key="item.id">
-        <li @click="fn(item)">
+      <ul>
+        <li @click="fn(item)" v-for="item of dataAll" :key="item.id">
           <img :src="item.img" alt="" />
           <p>{{ item.name }}</p>
           <p>{{ item.content }}</p>
@@ -56,6 +56,7 @@ export default {
     //渲染数据
     qq() {
       this.$axios.get('/data/homeGoods.json').then(res => {
+        console.log(res)
         this.dataAll = res.data
       })
     },
@@ -65,17 +66,11 @@ export default {
     },
     //点击详情页
     fn(i) {
-      // this.$router.push({
-      //   name: 'particulars',
-      //   params: {
-      //     key: i
-      //   }
-      // })
       this.$store.commit('data', i)
       this.$router.push('particulars')
     }
   },
-  mounted() {
+  created() {
     //数据初始化
     this.qq()
   }
@@ -126,7 +121,7 @@ export default {
   }
   .content-conter {
     width: 100%;
-    background: #ebebeb;
+    background: #fff;
     font-size: 0.31rem;
     color: #ababab;
     line-height: 1.14rem;
@@ -231,11 +226,11 @@ export default {
   ul {
     width: 100%;
     li {
-      width: 48%;
+      width: 49%;
       font-size: 0.35rem;
       display: block;
       float: left;
-      margin-right: 0.15rem;
+      margin-right: 0.02rem;
       img {
         width: 100%;
         height: 3rem;
