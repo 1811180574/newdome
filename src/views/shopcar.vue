@@ -30,7 +30,7 @@
     </div>
     <footer>
       <div class="footer_box" style="line-height:0.4rem;">
-        <p>共件金额:</p>
+        <p>共{{shopprice}}件金额:</p>
         <p><b style="color:#FF5722;font-size:0.42rem;">10000</b>元</p>
       </div>
       <div class="footer_box" style="background:#F4F4F4; font-size:0.26rem;">继续购物</div>
@@ -47,6 +47,12 @@ export default {
       shopGoods:this.$store.state.shopGoods
       // shopGoods:JSON.parse(localStorage.getItem('shopgoods'))
 
+    }
+  },
+  computed:{
+    shopprice(){
+    var num = 0
+    return num += Number(this.$store.state.shopGoods.price)
     }
   },
   created(){
@@ -110,7 +116,7 @@ header {
 }
 .null_shopcar{
   width: 100%;
-  height: 90vh;
+  height: 88vh;
   position: absolute;
   top:0.8rem;
   background:#fff;

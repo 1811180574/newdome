@@ -7,6 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    redirect:'/index',
     component: () => import('../views/Home.vue'),
     meta: {
       isshow: true,
@@ -15,6 +16,7 @@ const routes = [
   {
     path: '/index',
     name: 'index',
+
     component: () => import('../views/index.vue'),
         meta: {
       isshow: true,

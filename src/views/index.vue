@@ -103,7 +103,7 @@ export default {
     //获取主页轮播图的图片
     async getindexPhoto() {
       const res = await this.$axios.get(
-        'https://shiyaming1994.github.io/mi/static/rotationChart.json'
+        '/data/homeGoods.json'
       )
       this.indexlunbo = res.data
       console.log(this.indexlunbo)
@@ -111,7 +111,7 @@ export default {
     //获取主页的数据
     async getindexinfo() {
       const res = await this.$axios.get(
-        'https://shiyaming1994.github.io/mi/static/homeGoods.json?page=1'
+        '/data/homeGoods.json'
       )
       this.indexInfo = res.data
       console.log(this.indexInfo)
