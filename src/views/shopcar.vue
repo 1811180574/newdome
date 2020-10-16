@@ -1,6 +1,7 @@
 <template>
   <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <header>
       <div class="header_content"><</div>
       <div class="header_content" style="width:60%;">购物车</div>
@@ -39,6 +40,8 @@
 
     </footer>
 =======
+=======
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
     <div class="box">
       <header>
         <div class="a">
@@ -81,6 +84,9 @@
         </li>
       </ul>
     </div>
+<<<<<<< HEAD
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
+=======
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
   </div>
 </template>
@@ -89,6 +95,7 @@
 export default {
   data() {
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
       shopGoods:this.$store.state.shopGoods
       // shopGoods:JSON.parse(localStorage.getItem('shopgoods'))
@@ -99,6 +106,8 @@ export default {
     console.log(this.shopGoods)
     console.log(JSON.parse(localStorage.getItem('shopgoods')))
 =======
+=======
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
       dataAll: [],
       arr: [],
       data: []
@@ -129,12 +138,16 @@ export default {
     // arr.push(JSON.parse(sessionStorage.getItem('key')))
     // console.log(arr)
     // this.data = arr
+<<<<<<< HEAD
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
+=======
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
   }
 }
 </script>
 
 <style lang="less" scoped>
+<<<<<<< HEAD
 <<<<<<< HEAD
 header {
   width: 100%;
@@ -226,6 +239,8 @@ footer{
   }
 
 =======
+=======
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 .box {
   width: 100%;
   background: #fff;
@@ -393,6 +408,9 @@ footer{
       }
     }
   }
+<<<<<<< HEAD
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
+=======
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 }
 </style>

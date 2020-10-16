@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div id="nav">
 
       <Home></Home>
@@ -33,6 +34,26 @@ export default {
   color: #2c3e50;
 } */
 </style>
+=======
+    <Home v-show="$route.meta.isshow"></Home>
+
+    <router-view />
+  </div>
+</template>
+<script>
+import Home from './views/Home.vue'
+export default {
+  components: {
+    Home
+  },
+  data() {
+    return {}
+  }
+}
+</script>
+
+<style></style>
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 =======
     <Home v-show="$route.meta.isshow"></Home>
 

@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div id="big_box">
     <header>
       <div class="header_left"></div>
@@ -67,10 +68,15 @@
   <div>
     主页
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
+=======
+  <div>
+    主页
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 <<<<<<< HEAD
 import 'swiper/swiper-bundle.css'
 import Swiper from 'swiper/swiper-bundle.js'
@@ -236,6 +242,8 @@ header {
 }
 </style>
 =======
+=======
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 export default {
   data() {
     return {}
@@ -244,4 +252,7 @@ export default {
 </script>
 
 <style lang="lass" scoped></style>
+<<<<<<< HEAD
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
+=======
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd

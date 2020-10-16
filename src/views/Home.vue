@@ -1,7 +1,11 @@
 <template>
   <div class="home">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="footer" v-show="$route.meta.isshow">
+=======
+    <div class="footer" >
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 =======
     <div class="footer" >
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
@@ -26,9 +30,15 @@ export default {
       arr: [
         { name: '首页', src: require('../assets/img/tabbar/icon_home.png'), src2: require('../assets/img/tabbar/icon_home_selected.png'), path: '/index' },
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: '分类', src: require('../assets/img/tabbar/icon_intro.png'), src2: require('../assets/img/tabbar/icon_intro_selected.png'), path: '/recommend' },
         { name: '购物车', src: require('../assets/img/tabbar/icon_chat.png'), src2: require('../assets/img/tabbar/icon_chat_selected.png'), path: '/shopcar' },
         { name: '个人', src: require('../assets/img/tabbar/icon_mine.png'), src2: require('../assets/img/tabbar/icon_mine_selected.png'), path: '/mine' }
+=======
+        { name: '推荐', src: require('../assets/img/tabbar/icon_intro.png'), src2: require('../assets/img/tabbar/icon_intro_selected.png'), path: '/recommend' },
+        { name: '购物车', src: require('../assets/img/tabbar/icon_chat.png'), src2: require('../assets/img/tabbar/icon_chat_selected.png'), path: '/shopcar' },
+        { name: '我的', src: require('../assets/img/tabbar/icon_mine.png'), src2: require('../assets/img/tabbar/icon_mine_selected.png'), path: '/mine' }
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 =======
         { name: '推荐', src: require('../assets/img/tabbar/icon_intro.png'), src2: require('../assets/img/tabbar/icon_intro_selected.png'), path: '/recommend' },
         { name: '购物车', src: require('../assets/img/tabbar/icon_chat.png'), src2: require('../assets/img/tabbar/icon_chat_selected.png'), path: '/shopcar' },

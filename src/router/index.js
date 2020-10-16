@@ -7,6 +7,7 @@ const routes = [{
     path: '/',
     name: 'Home',
 <<<<<<< HEAD
+<<<<<<< HEAD
     component: () => import('../views/Home.vue'),
     meta: {
       isshow: true,
@@ -40,6 +41,8 @@ const routes = [{
       // keep: true
     }
 =======
+=======
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
     component: () => import('../views/Home.vue')
 
   },
@@ -60,6 +63,7 @@ const routes = [{
       isshow: true
     }
 
+<<<<<<< HEAD
   },
   {
     path: '/shopcar',
@@ -90,10 +94,34 @@ const routes = [{
     }
   },
   {
+=======
+  },
+  {
+    path: '/shopcar',
+    name: 'shopcar',
+    component: () => import('../views/shopcar.vue'),
+    meta: {
+      isshow: true
+    }
+
+  },
+  {
+    path: '/mine',
+    name: 'mine',
+    component: () => import('../views/mine.vue'),
+    meta: {
+      isshow: true
+    }
+  },
+  {
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
     path: '/particulars',
     name: 'particulars',
     component: () => import('../components/particulars/Particulars.vue')
   },
+<<<<<<< HEAD
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
+=======
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 
 ]

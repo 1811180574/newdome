@@ -12,7 +12,11 @@
     "less": "^3.12.2",
     "less-loader": "^4.1.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "swiper": "^6.3.3",
+=======
+    "mockjs": "^1.1.0",
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
 =======
     "mockjs": "^1.1.0",
 >>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
