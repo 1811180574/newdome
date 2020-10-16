@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div id="big_box">
     <header>
       <div class="header_left"></div>
@@ -62,10 +63,15 @@
       <p>{{ item.content }}</p>
       <p style="color:#EA635C;font-size:0.28rem;">￥{{ item.price }}</p>
     </div>
+=======
+  <div>
+    主页
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 import 'swiper/swiper-bundle.css'
 import Swiper from 'swiper/swiper-bundle.js'
 export default {
@@ -229,3 +235,13 @@ header {
   }
 }
 </style>
+=======
+export default {
+  data() {
+    return {}
+  }
+}
+</script>
+
+<style lang="lass" scoped></style>
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd

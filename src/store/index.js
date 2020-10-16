@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
+<<<<<<< HEAD
 
 export default new Vuex.Store({
   state: {
@@ -20,3 +21,5 @@ export default new Vuex.Store({
   modules: {
   }
 })
+=======
+>>>>>>> e457143650f00ed8b2eda8f7c7feda72e541b5bd
