@@ -15,7 +15,6 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 Vue.use(Vant)
 
-
 Vue.use(less) // 静态图片要引入再使用
 Vue.prototype.$axios = axios
 

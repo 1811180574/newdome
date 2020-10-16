@@ -15,11 +15,11 @@
       <div class="content-conter">
         <p>购物车还是空的</p>
         <div class="stroll">去逛逛</div>
-        <div class="boss">
-          <img src="../assets/img/home/3.webp" alt="" />
+        <div class="boss" v-for="(item, index) of data" :key="index">
+          <img :src="item.img" alt="" />
           <div class="r">
-            <div class="s1">小米8 屏幕指纹板</div>
-            <div class="s2">￥7999</div>
+            <div class="s1">{{ item.name }}</div>
+            <div class="s2">{{ item.price }}</div>
             <div class="bb">
               <div class="relief">-</div>
               <div class="num">2</div>
@@ -49,14 +49,15 @@
 export default {
   data() {
     return {
-      dataAll: []
+      dataAll: [],
+      arr: [],
+      data: []
     }
   },
   methods: {
     //渲染数据
     qq() {
       this.$axios.get('/data/homeGoods.json').then(res => {
-        console.log(res)
         this.dataAll = res.data
       })
     },
@@ -73,6 +74,11 @@ export default {
   created() {
     //数据初始化
     this.qq()
+    //接收数据
+    // let arr = []
+    // arr.push(JSON.parse(sessionStorage.getItem('key')))
+    // console.log(arr)
+    // this.data = arr
   }
 }
 </script>

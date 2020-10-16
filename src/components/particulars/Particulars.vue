@@ -19,7 +19,7 @@
           <i class="iconfont icon-gouwuche"></i>
           <span>购物车</span>
         </div>
-        <div class="btn">加入购物车</div>
+        <div class="btn" @click="btn">加入购物车</div>
       </footer>
     </div>
   </div>
@@ -35,12 +35,21 @@ export default {
   created() {},
   methods: {
     fn() {
-      this.$router.push('index')
-    },
-    fn1() {
       this.$router.push('shopcar')
     },
-    fn2() {}
+    fn1() {
+      this.$router.push('index')
+    },
+    fn2() {
+      this.$router.push('shopcar')
+    },
+    //加入购物车
+    btn() {
+      let data = []
+      data.push(JSON.stringify(this.$store.state.obj))
+
+      sessionStorage.setItem('key', data)
+    }
   }
 }
 </script>
@@ -59,7 +68,6 @@ export default {
   }
   .content {
     width: 100%;
-    padding-left: 0.3rem;
     img {
       height: 10rem;
     }

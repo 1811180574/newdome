@@ -1,21 +1,15 @@
 <template>
   <div>
-    zhuye
-
+    主页
   </div>
 </template>
 
 <script>
-  export default {
-    data(){
-      return{
-
-      }
-    }
-    
+export default {
+  data() {
+    return {}
   }
+}
 </script>
 
-<style lang="lass" scoped>
-
-</style>
+<style lang="lass" scoped></style>
