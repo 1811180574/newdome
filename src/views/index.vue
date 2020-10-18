@@ -22,10 +22,11 @@
           </div>
         </div>
       </div>
-      <!-- 手机信息 -->
-      <div class="nav_text">
-        <ul>
-          <li>
+
+          <!-- 手机信息 -->
+      <div class="nav_text" >
+        <ul >
+          <li >
             <i class="iconfont icon-youhuiquan"></i>
             <p>icon1</p>
           </li>
@@ -47,8 +48,12 @@
           </li>
         </ul>
       </div>
-    </div>
-    <!-- 手机的图片和价格 -->
+
+      </div>
+
+  
+
+        <!-- 手机的图片和价格 -->
     <div
       class="phone_info"
       v-for="(item, index) in indexInfo"
@@ -63,7 +68,15 @@
       <p style="color:#EA635C;font-size:0.28rem;">￥{{ item.price }}</p>
     </div>
     
+  <div>
+
   </div>
+
+
+    </div>
+    
+  
+  
 </template>
 
 <script>

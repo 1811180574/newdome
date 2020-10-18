@@ -52,10 +52,23 @@ const routes = [
     }
   },
   //主页手机详情页面
-  {path:'/phoneinfo/:ind',name:'phoneinfo',component:()=>import('../views/indexChild/phoneinfo.vue')}
+  {path:'/phoneinfo/:ind',name:'phoneinfo',component:()=>import('../views/indexChild/phoneinfo.vue')},
 
 
 
+
+  {
+    path: '/NewShipping',
+    name: 'NewShipping',
+    component: () => import( '../components/NewShipping.vue'),
+  
+  },
+  {
+    path: '/Shipping',
+    name: 'Shipping',
+    component: () => import( '../components/Shipping.vue'),
+  
+  },
 ]
 
 const router = new VueRouter({

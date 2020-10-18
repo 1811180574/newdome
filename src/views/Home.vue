@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div class="footer" v-show="$route.meta.isshow">
+    <div class="footer" >
        <li v-for='(item,index) in arr' :key="index" @click="fun(index)">
          <router-link :to="item.path" style="text-decoration:none;">
          <img :src="n===index?item.src2:item.src" alt="">
@@ -9,6 +10,7 @@
        </li>
     </div>
 
+  </div> 
   </div>
 
 </template>
@@ -23,7 +25,7 @@ export default {
         { name: '首页', src: require('../assets/img/tabbar/icon_home.png'), src2: require('../assets/img/tabbar/icon_home_selected.png'), path: '/index' },
         { name: '分类', src: require('../assets/img/tabbar/icon_intro.png'), src2: require('../assets/img/tabbar/icon_intro_selected.png'), path: '/recommend' },
         { name: '购物车', src: require('../assets/img/tabbar/icon_chat.png'), src2: require('../assets/img/tabbar/icon_chat_selected.png'), path: '/shopcar' },
-        { name: '个人', src: require('../assets/img/tabbar/icon_mine.png'), src2: require('../assets/img/tabbar/icon_mine_selected.png'), path: '/mine' }
+        { name: '我的', src: require('../assets/img/tabbar/icon_mine.png'), src2: require('../assets/img/tabbar/icon_mine_selected.png'), path: '/mine' }
       ]
     }
   },
