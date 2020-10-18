@@ -62,6 +62,7 @@
       <p>{{ item.content }}</p>
       <p style="color:#EA635C;font-size:0.28rem;">￥{{ item.price }}</p>
     </div>
+    
   </div>
 </template>
 
@@ -106,7 +107,6 @@ export default {
         '/data/homeGoods.json'
       )
       this.indexlunbo = res.data
-      console.log(this.indexlunbo)
     },
     //获取主页的数据
     async getindexinfo() {
@@ -114,11 +114,9 @@ export default {
         '/data/homeGoods.json'
       )
       this.indexInfo = res.data
-      console.log(this.indexInfo)
     },
     //跳转详情页的函数
     goInfo(index) {
-      console.log(index)
       this.$router.push({
         //跳转页面传参
         path: `/phoneinfo/${index}`,

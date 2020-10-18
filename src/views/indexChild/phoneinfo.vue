@@ -40,21 +40,23 @@
         </div>
 
         <!-- vant加入购物车 -->
-        <van-goods-action  class="minshopcar" >
-          <van-goods-action-icon icon="chat-o" text="客服" style="border-radius:0.2rem;" />
+        <van-goods-action class="minshopcar">
+          <van-goods-action-icon
+            icon="chat-o"
+            text="客服"
+            style="border-radius:0.2rem;"
+          />
           <van-goods-action-icon
             icon="cart-o"
             text="购物车"
             :badge="this.$store.state.shopGoods.length"
           />
           <van-goods-action-button
-          class="addButton"
+            class="addButton"
             type="danger"
             text="加入购物车"
-
             @click="addShopcar()"
           />
-          <!-- <van-goods-action-button type="danger" text="立即购买" /> -->
         </van-goods-action>
       </div>
     </div>
@@ -75,11 +77,17 @@ export default {
       //从localstorage里面拉取
       shopcarlength: Number(localStorage.getItem('shopnumber')),
       //要传给vuex里面的数组
-      shoparr: [],
+      shoparr: JSON.parse(sessionStorage.getItem("key")),
+
+      carnum: 0,
     }
   },
   created() {
     this.indexInfo()
+  },
+  mounted(){
+    console.log(this.shoparr);
+    console.log((JSON.parse(sessionStorage.getItem("key")).length))
   },
   methods: {
     //加入购物车的函数
@@ -104,8 +112,16 @@ export default {
         message: '添加成功',
       })
 
-      // this.shoparr.push(this.getinfo)
+      //点击添加存储到vuex里面的数据
       this.$store.commit('addshopcar', this.getinfo)
+
+      this.shoparr.push(this.getinfo)
+
+      this.shoparr = this.$store.state.shopGoods
+
+      sessionStorage.setItem('key', JSON.stringify(this.shoparr))
+
+      this.carnum = JSON.parse(sessionStorage.getItem('key')).length
     },
   },
 }
@@ -183,15 +199,14 @@ export default {
   }
 }
 
-.minshopcar{
-  width:94%;
-  margin-left:3%;
-  border-radius:0.2rem;
+.minshopcar {
+  width: 94%;
+  margin-left: 3%;
+  border-radius: 0.2rem;
   position: absolute;
-  bottom:0.2rem;
-  .addButton{
+  bottom: 0.2rem;
+  .addButton {
     width: 1.5rem !important;
   }
-
 }
 </style>
